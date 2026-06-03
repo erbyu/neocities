@@ -1,0 +1,5 @@
+website created, designed, and coded by erbyu
+background from https://rivendell.neocities.org/backgrounds/
+all music created by erbyu
+
+font "Warp Desktop" by DamienG used (license can be found at /assets/warpdesktopfont/license.txt)
