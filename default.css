@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
 	font-family: Founded;
-	src:url(assets/warpdesktopfont/warp-desktop.otf.woff2);
+	src:url(./assets/warpdesktopfont/warp-desktop.otf.woff2);
 }
 
 
@@ -12,6 +12,7 @@ body {
 	margin:0;
 	background-color:#090A0A;
 	background:url(https://rivendell.neocities.org/backgrounds/stars4.gif);
+	background-attachment: fixed;
   /* thanks https://rivendell.neocities.org/backgrounds/ :) */
 	font-family:Founded;
 	color:white;
@@ -20,7 +21,7 @@ body {
 .wrapper {
 	margin: 0 auto;
 	margin-top:100px;
-	width:800px;
+	width:50%;
 }
 
 .scrollable-wrapper {
@@ -28,27 +29,59 @@ body {
   scrollbar-color: white transparent;
   margin:12px;
   padding:12px;
-  height:200px;
+  max-height:max-content;
+  height:300px;
   overflow:auto;
   border: 1px solid #4F4F4F;
+  resize: vertical;        /* Options: both, horizontal, vertical */
 }
 
 
 
-h1 {
-  
+.title {
+  text-align: center;
 }
 
-a {
-	margin-left:25px;
+details.button {
+	margin-left:10px;
+}
+
+details.button > summary {
+	margin-left:0px;
 	text-decoration:none;
 	line-height:25px;
 	color:#84ff00;
-}
-a:hover {
-	margin-left:35px;
+	cursor: pointer;
 }
 
+a.link,a.indented-link {
+	text-decoration:none;
+	line-height:25px;
+	color:#baff70;
+	cursor: pointer;
+}
+a.indented-link {
+	margin-left:25px;
+}
+
+details.button > summary {
+	font-weight: bold;
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+}
+
+
+details.button > summary:hover {
+	margin-left:10px;
+	text-decoration:underline;
+}
+details.button[open] > summary {
+	font-size: 20px;
+	padding:10px;
+	margin-left:-5px !important;
+	border-bottom: solid #4F4F4F 1px;
+
+}
 
 .credits {
 	margin-top:20px;
@@ -66,5 +99,14 @@ a:hover {
   text-align:center;
   align-items: center;
 	color:transparent;
-	border-bottom: solid #4F4F4F 1px;
+	border-bottom: solid #383838 1px;
+}
+
+.artist-description::before, .artist-description::after {
+	content: "\"";
+}
+.artist-description {
+	background-color: rgb(14, 14, 14);
+	margin:12px;
+	padding:12px;
 }
