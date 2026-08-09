@@ -19,9 +19,17 @@ body {
 }
 
 .wrapper {
-	margin: 0 auto;
+	display:flex;
+	justify-content: center;
+	align-items: stretch;
 	margin-top:100px;
-	width:50%;
+	margin-left: 10%;
+	margin-right:10%;
+}
+
+.window {
+	padding:25px;
+	width:70%;
 }
 
 .scrollable-wrapper {
@@ -34,6 +42,8 @@ body {
   overflow:auto;
   border: 1px solid #4F4F4F;
   resize: vertical;        /* Options: both, horizontal, vertical */
+  border-radius:10px;
+  border-bottom-right-radius: 0;
 }
 
 
@@ -109,4 +119,5 @@ details.button[open] > summary {
 	background-color: rgb(14, 14, 14);
 	margin:12px;
 	padding:12px;
+	border-radius:10px;
 }
